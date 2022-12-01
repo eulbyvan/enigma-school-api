@@ -2,7 +2,7 @@ package com.enigmacamp.api;
 
 import com.enigmacamp.model.Lecturer;
 import com.enigmacamp.model.request.LecturerReq;
-import com.enigmacamp.service.ILecturerService;
+import com.enigmacamp.service.IBaseService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping("/lecturers")
 public class LecturerController {
  @Autowired
- private ILecturerService lecturerService;
+ private IBaseService<Lecturer> lecturerService;
  @Autowired
  private ModelMapper modelMapper;
 

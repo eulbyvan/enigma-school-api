@@ -1,8 +1,8 @@
 package com.enigmacamp.service.implementation;
 
 import com.enigmacamp.model.Lecturer;
-import com.enigmacamp.repo.ILecturerRepo;
-import com.enigmacamp.service.ILecturerService;
+import com.enigmacamp.repo.IBaseRepo;
+import com.enigmacamp.service.IBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +15,9 @@ import java.util.List;
  */
 
 @Service
-public class LecturerService implements ILecturerService {
+public class LecturerService implements IBaseService<Lecturer> {
  @Autowired
- ILecturerRepo lecturerRepo;
+ IBaseRepo<Lecturer> lecturerRepo;
 
  @Override
  public Lecturer add(Lecturer lecturer) {

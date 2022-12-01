@@ -1,6 +1,6 @@
 package com.enigmacamp.service;
 
-import com.enigmacamp.model.Student;
+import com.enigmacamp.model.Lecturer;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
  * @since 01/12/22
  */
 
-public interface IStudentService {
-	Student add(Student student);
-	List<Student> list();
+public interface IBaseService<T> {
+	T add(T data);
+	List<T> list();
 }

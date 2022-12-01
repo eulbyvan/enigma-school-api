@@ -2,7 +2,7 @@ package com.enigmacamp.api;
 
 import com.enigmacamp.model.Student;
 import com.enigmacamp.model.request.StudentReq;
-import com.enigmacamp.service.IStudentService;
+import com.enigmacamp.service.IBaseService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping("/students")
 public class StudentController {
 	@Autowired
-	private IStudentService studentService;
+	private IBaseService<Student> studentService;
 	@Autowired
 	private ModelMapper modelMapper;
 

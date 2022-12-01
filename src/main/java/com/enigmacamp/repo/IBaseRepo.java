@@ -1,6 +1,5 @@
 package com.enigmacamp.repo;
 
-import com.enigmacamp.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -9,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @since 01/12/22
  */
 
-public interface IStudentRepo extends JpaRepository<Student, Long> {
+public interface IBaseRepo<T> extends JpaRepository<T, Long> {
 }

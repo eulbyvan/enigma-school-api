@@ -2,7 +2,7 @@ package com.enigmacamp.api;
 
 import com.enigmacamp.model.Subject;
 import com.enigmacamp.model.request.SubjectReq;
-import com.enigmacamp.service.ISubjectService;
+import com.enigmacamp.service.IBaseService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping("/subjects")
 public class SubjectController {
 	@Autowired
-	private ISubjectService subjectService;
+	private IBaseService<Subject> subjectService;
 	@Autowired
 	private ModelMapper modelMapper;
 

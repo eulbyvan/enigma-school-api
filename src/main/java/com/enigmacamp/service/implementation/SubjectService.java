@@ -1,8 +1,8 @@
 package com.enigmacamp.service.implementation;
 
 import com.enigmacamp.model.Subject;
-import com.enigmacamp.repo.ISubjectRepo;
-import com.enigmacamp.service.ISubjectService;
+import com.enigmacamp.repo.IBaseRepo;
+import com.enigmacamp.service.IBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +15,9 @@ import java.util.List;
  */
 
 @Service
-public class SubjectService implements ISubjectService {
+public class SubjectService implements IBaseService<Subject> {
  @Autowired
- ISubjectRepo subjectRepo;
+ IBaseRepo<Subject> subjectRepo;
 
  @Override
  public Subject add(Subject subject) {

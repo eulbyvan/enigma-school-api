@@ -1,8 +1,8 @@
 package com.enigmacamp.service.implementation;
 
 import com.enigmacamp.model.Student;
-import com.enigmacamp.repo.IStudentRepo;
-import com.enigmacamp.service.IStudentService;
+import com.enigmacamp.repo.IBaseRepo;
+import com.enigmacamp.service.IBaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,9 +15,9 @@ import java.util.List;
  */
 
 @Service
-public class StudentService implements IStudentService {
+public class StudentService implements IBaseService<Student> {
 	@Autowired
-	IStudentRepo studentRepo;
+	IBaseRepo<Student> studentRepo;
 
 	@Override
 	public Student add(Student student) {
